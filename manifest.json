@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "reloader",
+  "description": "reloading extension",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon-off-19.png",
+    "off": "icon-on-19.png",
+    "error": "icon-error-19.png"
+  },
+
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": false
+  },
+
+  "permissions": [
+    "activeTab"
+  ]
+}
