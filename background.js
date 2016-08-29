@@ -37,8 +37,8 @@ chrome.browserAction.onClicked.addListener( function ( tab ) {
 
 } )
 
-chrome.tabs.onUpdated.addListener( function( tabId, changeInfo ) {
-  if ( isLocalHost( changeInfo.url ) ) {
+chrome.tabs.onUpdated.addListener( function( tabId, changeInfo, tab ) {
+  if ( isLocalHost( tab.url ) && tabs.includes( tabId ) == false ) {
     tabs.push( tabId )
   }
 } )
